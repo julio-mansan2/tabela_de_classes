@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Gerar tabela de classes</h2>
+
+    <div class="form-row">
+        <label>Menor valor: <input type="number" id="menorValor"></label>
+        <label>Maior valor: <input type="number" id="maiorValor"></label>
+        <label>Nº de elementos: <input type="number" id="numeroDeElementos"></label>
+        <button onclick="cadastrar()">Cadastrar</button>
+    </div>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Classe</th>
+                <th>Xi</th>
+                <th>Frequência simples</th>
+                <th>Frequência relativa</th>
+                <th>Frequência relativa (%)</th>
+                <th>Frequência simples acumulada</th>
+                <th>Frequência relativa acumulada</th>
+                <th>Frequência relativa acumulada (%)</th>
+                <th>Desvio</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button id="calcular">Calcular</button>
+
+    <ul id="list">
+
+    </ul>
+    <script src="index.js"></script>
+</body>
+
+</html>
