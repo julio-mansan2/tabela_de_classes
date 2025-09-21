@@ -116,9 +116,9 @@ function tableValues(amplitudeClasse, somatorio) {
         `Média: ${media()}`,
         `Mediana: ${mediana(amplitudeClasse)}`,
         `Moda: ${moda().join(", ")}`,
-        `Desvio padrão: ${desvioPadrao(somatorio)}`,
         `Variância: ${variancia(somatorio)}`,
-        `Coeficiente de variação: ${(variancia(somatorio)/media()).toFixed(2)*100}%`
+        `Desvio Padrão: ${desvioPadrao(somatorio)}`,
+        `Coeficiente de variação: ${(desvioPadrao(somatorio)/media()).toFixed(2)*100}%`
     ]
 
     valores.forEach(valor => {
@@ -161,10 +161,10 @@ function moda() {
     return modas;
 }
 
-function desvioPadrao(sum) {
+function variancia(sum) {
     return (sum / (numeroElementos.value - 1)).toFixed(2);
 }
 
-function variancia(somatorio) {
-    return Math.sqrt(desvioPadrao(somatorio)).toFixed(2);
+function desvioPadrao(somatorio) {
+    return Math.sqrt(variancia(somatorio)).toFixed(2);
 }
